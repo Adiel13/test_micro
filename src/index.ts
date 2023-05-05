@@ -1,7 +1,10 @@
 const express = require('express');
+import { router } from "./routes/routes";
 
 const app = express();
 const port = 5000;
+
+app.use('', router);
 
 app.get('/', (req, res) =>{
 	res.send('Ejemplo TS UDV Multiplataforma');
