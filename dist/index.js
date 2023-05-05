@@ -1,12 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const express = require('express');
+const routes_1 = require("./routes/routes");
 const app = express();
 const port = 5000;
-app.get('/', (req, res) => {
-    res.send('Ejemplo TS UDV Multiplataforma');
-});
-app.get('/saludo', (req, res) => {
-    res.send('¡Hola mundo!');
-});
+app.use('', routes_1.router);
 app.listen(port, () => {
     console.log('El server está levantado en el puerto 5000');
 });
